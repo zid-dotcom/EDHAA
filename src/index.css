@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 bg-white font-sans text-ink antialiased;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+}
+
+@layer components {
+  .page-shell {
+    @apply min-h-screen bg-white;
+  }
+
+  .site-wrap {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-10;
+  }
+
+  .section-soft {
+    @apply bg-soft;
+  }
+
+  .section-rule {
+    @apply border-t border-line;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.24em] text-muted;
+  }
+
+  .section-title {
+    @apply font-serif text-4xl leading-tight text-ink sm:text-5xl;
+  }
+
+  .section-copy {
+    @apply max-w-3xl text-[17px] leading-8 text-muted;
+  }
+
+  .text-link {
+    @apply inline-flex items-center gap-2 border-b border-ink pb-1 text-sm font-semibold uppercase tracking-[0.16em] text-ink;
+  }
+
+  .field {
+    @apply w-full border border-line bg-white px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-muted focus:border-navy;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center border border-navy bg-navy px-5 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-white hover:text-navy;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center border border-line bg-white px-5 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-ink transition-colors hover:border-navy hover:text-navy;
+  }
+
+  .stat-line {
+    @apply border-t border-line pt-4;
+  }
+
+  .page-frame {
+    @apply py-16 sm:py-20;
+  }
+}
